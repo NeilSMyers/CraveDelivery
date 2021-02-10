@@ -10,7 +10,11 @@ const {Navigator, Screen} = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Navigator>
+      <Navigator
+        screenOptions={{
+          headerBackTitleVisible: false,
+          headerTintColor: 'black',
+        }}>
         <Screen name="Deliveries" component={Deliveries} />
         <Screen name="DeliveryDetail" component={DeliveryDetail} />
       </Navigator>
